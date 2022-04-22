@@ -5,9 +5,9 @@ _At efio we receive a lot of applications for apprenticeship from allover the co
 
 _There is not a single solution for this challenge, and it is not a recuirement to complete all task. The idea is to give us a better understanding of your coding skills while you will get a better understanding of our expectations for your first time as apprentice at efio._
 
-_The challege is created in the C#.NET coding language as this is widely used throughout the data technician education centres. If you prefer a different language please let us know at cv@efio.dk_
+_The challege is created in the C#.NET coding language as this is widely used throughout the data technician education centres. If you prefer a different language please let us know at apprentice@efio.dk_
 
-_When you have finished challenge please archive and submit your solution to cv@efio.dk along with your application, resume and any grade sheets you may have._
+_When you have finished challenge please archive and submit your solution to apprentice@efio.dk along with your application, resume and any grade sheets you may have._
 
 _Happy coding ;-)_
 
