@@ -1,7 +1,6 @@
 # efio apprentice coding challenge
 
 #### _Read this before you start!_
----
 _At efio we receive a lot of applications for apprenticeship from allover the country. Allthough we are very excited about this, we have limited capacity in interviewing all applicants. Because of this we have decided to present all applicants with a coding challenge that will help os give a better insight in your current coding skills and to give all application similar conditions in our assessment._
 
 _There is not a single solution for this challenge, and it is not a recuirement to complete all task. The idea is to give us a better understanding of your coding skills while you will get a better understanding of our expectations for your first time as apprentice at efio._
@@ -13,7 +12,6 @@ _When you have finished challenge please archive and submit your solution to tal
 _Happy coding ;-)_
 
 ## Introduction to the tasks
----
 
 In this repository you will find three tasks:
   1. Mario's Pizza
@@ -26,7 +24,6 @@ Common for all tasks you will find a number of Interface files within the `src/`
 Below you will find user stories for all tasks.
 
 ## Mario's Pizza
----
 #### Background
 At Mario's Pizza customer many customers is having trouble on deciding from a long menu of pizzas. Mario whishes functionality to provide a customized menu for his customers based on their preferences.
 
@@ -43,7 +40,6 @@ At Mario's Pizza customer many customers is having trouble on deciding from a lo
 **THEN** return Vesivio and Calzone
 
 ## Input Validation
----
 #### Background
 On efio's website we have a contact form, where visitors can submit their e-mail address. To avoid typos need input validation on the e-mail input field.
 
@@ -74,7 +70,6 @@ On efio's website we have a contact form, where visitors can submit their e-mail
 **THEN** return true
 
 ## Holiday Calendar
----
 #### Background
 For the efio timeregistration we need to notify employees if they forget to do their time registration. However, holidays are days off why they do not need to fill in their hours.  
 
