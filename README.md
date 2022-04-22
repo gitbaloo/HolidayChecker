@@ -28,46 +28,46 @@ Below you will find user stories for all tasks.
 At Mario's Pizza customer many customers is having trouble on deciding from a long menu of pizzas. Mario whishes functionality to provide a customized menu for his customers based on their preferences.
 
 #### Userstory
-**AS A** pizza loving customer
-**I WANT** a method to filter the pizza menu based on ingridients
-**SO THAT** I can easily find my favorite pizza
+**AS A** pizza loving customer  
+**I WANT** a method to filter the pizza menu based on ingridients  
+**SO THAT** I can easily find my favorite pizza  
 
 #### Accept criterias
 **Scenario: Like ham, dislike pineapple**
-**GIVEN** Must have ham
-**AND** Won't have pineapple
-**WHEN** finding pizzas
-**THEN** return Vesivio and Calzone
+**GIVEN** Must have ham  
+**AND** Won't have pineapple  
+**WHEN** finding pizzas  
+**THEN** return Vesivio and Calzone  
 
 ## Input Validation
 #### Background
 On efio's website we have a contact form, where visitors can submit their e-mail address. To avoid typos need input validation on the e-mail input field.
 
 #### Userstory
-**AS A** webmaster
-**I WANT** input validation on e-mail addresses
-**SO THAT** visitors can be alerted before submitting a mistyped address
+**AS A** webmaster  
+**I WANT** input validation on e-mail addresses  
+**SO THAT** visitors can be alerted before submitting a mistyped address  
 
 #### Accept criterias
-**Scenario: No @**
-**GIVEN** No @ in e-mail
-**WHEN** validating email
-**THEN** return false
+**Scenario: No @**  
+**GIVEN** No @ in e-mail  
+**WHEN** validating email  
+**THEN** return false  
 
-**Scenario: No user**
-**GIVEN** e-mail string starting with `@` char
-**WHEN** validating email
-**THEN** return false
+**Scenario: No user**  
+**GIVEN** e-mail string starting with `@` char  
+**WHEN** validating email  
+**THEN** return false  
 
-**Scenario: No tld**
-**GIVEN** e-mail string without tld in hostname
-**WHEN** validating email
-**THEN** return false
+**Scenario: No tld**  
+**GIVEN** e-mail string without tld in hostname  
+**WHEN** validating email  
+**THEN** return false  
 
-**Scenario: valid e-mail**
-**GIVEN** valid e-mail string
-**WHEN** validating email
-**THEN** return true
+**Scenario: valid e-mail**  
+**GIVEN** valid e-mail string  
+**WHEN** validating email  
+**THEN** return true  
 
 ## Holiday Calendar
 #### Background
@@ -78,27 +78,27 @@ Holidays are a national mater not supported by the [GregorianCalendar](https://d
 
 
 #### Userstory 1
-**AS A** bookkeeper
-**I WANT** a to know if a given day is a holiday
-**SO THAT** i know wether my colleagues must do time registration or not.
+**AS A** bookkeeper  
+**I WANT** a to know if a given day is a holiday  
+**SO THAT** i know wether my colleagues must do time registration or not.  
 
 #### Accept criteria
-**Scenario: Holiday**
-**GIVEN** X-mas day
-**WHEN** asking if holiday
-**THEN** return true
+**Scenario: Holiday**  
+**GIVEN** X-mas day  
+**WHEN** asking if holiday  
+**THEN** return true  
 
-**Scenario: Weekday**
-**GIVEN** X-mas day
-**WHEN** asking if holiday
-**THEN** return false
+**Scenario: Weekday**  
+**GIVEN** X-mas day  
+**WHEN** asking if holiday  
+**THEN** return false  
 
 #### Userstory 2
-**AS A** bookkeeper
-**I WANT** a to know all holidays within a time period
-**SO THAT** i can tell my colleagues in advance
+**AS A** bookkeeper  
+**I WANT** a to know all holidays within a time period  
+**SO THAT** i can tell my colleagues in advance  
 
-**Scenario: Easter month**
-**GIVEN** month with easter
-**WHEN** asking for all holidays
-**THEN** return Danish national holidays (Maundy thursday, Good Friday, Easter Sunday & Easter Monday)
+**Scenario: Easter month**  
+**GIVEN** month with easter  
+**WHEN** asking for all holidays  
+**THEN** return Danish national holidays (Maundy thursday, Good Friday, Easter Sunday & Easter Monday)  
