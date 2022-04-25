@@ -38,7 +38,7 @@ public class HolidayTests
   {
     // Arrange
     var startDate = new DateTime(2022, 4, 1);
-    var endDate = new DateTime(2022, 4, 31);
+    var endDate = new DateTime(2022, 4, 30);
 
     // Act
     var result = fixture.GetHolidays(startDate, endDate);
