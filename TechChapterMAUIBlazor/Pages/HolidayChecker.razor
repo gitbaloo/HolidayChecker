@@ -1,0 +1,87 @@
+﻿@using HolidayCalendar;
+@page "/holiday"
+
+<h1>Holiday Checker</h1>
+
+<h2>Check an individual date</h2>
+<input type="date" @bind="inputDate" />
+<button @onclick="CheckHoliday">Check date</button>
+
+@if (isCheckHolidayClicked)
+{
+    <p>
+        @(searchedDate.ToString("dd-MM-yyyy")) is
+        @(isHoliday ? "a holiday" + (isNationalHoliday ? " and a national holiday." : " but NOT a national holiday.") : "NOT a holiday.")
+    </p>
+}
+
+
+<h2>Check holidays within a specific time period</h2>
+<p>From:</p>
+<input type="date" @bind="inputStartDate" />
+<p>To:</p>
+<input type="date" @bind="inputEndDate"/>
+<button @onclick="GetHolidays">Find holidays</button>
+
+@if (isGetHolidaysClicked)
+{
+    @if (holidays.Any())
+    {
+        <p>Between @(searchedStartDate.ToString("dd-MM-yyyy")
+         ) and @(searchedEndDate.ToString("dd-MM-yyyy")
+          ) the following days are holidays:</p>
+        @foreach (Holiday holiday in holidays)
+        {
+            <p>@(holiday.Date.ToString("dd-MM-yyyy")): @(holiday.Name) @(holiday.NationalHoliday ? "(National Holiday)" : "(Not a National Holiday)")</p>
+        }
+    }
+    else
+    {
+        <p>There are no holidays in between @(searchedStartDate.ToString("dd-MM-yyyy")
+         ) and @(searchedEndDate.ToString("dd-MM-yyyy")).</p>
+    }
+}
+
+@inject HttpClient httpClient
+@code
+{
+    private HolidayCalendar holidayCalendar;
+
+    protected override void OnInitialized()
+    {
+        holidayCalendar = new HolidayCalendar(httpClient);
+    }
+
+    private DateTime inputDate = DateTime.Today;
+    private DateTime searchedDate;
+    private bool isHoliday;
+    private bool isNationalHoliday;
+    private bool isCheckHolidayClicked;
+
+    private DateTime inputStartDate = DateTime.Today;
+    private DateTime inputEndDate = DateTime.Today.AddDays(1);
+
+    private DateTime searchedStartDate;
+    private DateTime searchedEndDate;
+    private ICollection<Holiday> holidays;
+    private bool isGetHolidaysClicked;
+
+    private async Task CheckHoliday()
+    {
+        searchedDate = inputDate;
+        isHoliday = await holidayCalendar.IsHoliday(searchedDate);
+        if (isHoliday)
+        {
+            isNationalHoliday = await holidayCalendar.IsNationalHoliday(searchedDate);
+        }
+        isCheckHolidayClicked = true;
+    }
+
+    private async Task GetHolidays()
+    {
+        searchedStartDate = inputStartDate;
+        searchedEndDate = inputEndDate;
+        holidays = await holidayCalendar.GetHolidays(searchedStartDate, searchedEndDate);
+        isGetHolidaysClicked = true;
+    }
+}

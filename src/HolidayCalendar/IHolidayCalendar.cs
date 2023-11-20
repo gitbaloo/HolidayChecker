@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
+using System.Threading.Tasks;
 
 namespace HolidayCalendar;
 public interface IHolidayCalendar
 {
-  bool IsHoliday(DateTime date);
+  Task<bool> IsHoliday(DateTime date);
 
-  ICollection<DateTime> GetHolidays(DateTime startDate, DateTime endDate);
+  Task<ICollection<Holiday>> GetHolidays(DateTime startDate, DateTime endDate);
 }
