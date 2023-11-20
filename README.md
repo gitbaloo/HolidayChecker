@@ -1,5 +1,7 @@
 MAUI app made in order to showcase the use of the Salling Group Holidays API for TechChapter.
 
+Run app on Windows Machine.
+
 Task given by TechChapter:
 
 ## Holiday Calendar
